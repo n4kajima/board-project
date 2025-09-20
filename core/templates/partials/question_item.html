@@ -1,0 +1,17 @@
+<div class="card mb-3">
+  <div class="card-body">
+    <div class="d-flex justify-content-between align-items-start">
+      <div>
+        <a class="h5 text-decoration-none" href="{% url 'question_detail' q.id %}">{{ q.title }}</a>
+        <div class="small text-muted mt-1">
+          {{ q.get_status_display }} ・ {{ q.subject }} ・ by {{ q.author.username }} ・ {{ q.created_at|date:"Y/m/d H:i" }}
+          {% if q.canceled %}<span class="badge bg-secondary ms-2">取消済</span>{% endif %}
+        </div>
+      </div>
+      <span class="badge bg-info">回答 {{ q.answer_count }}</span>
+    </div>
+    {% if q.body %}
+      <p class="mt-2 mb-0 text-truncate">{{ q.body|striptags }}</p>
+    {% endif %}
+  </div>
+</div>

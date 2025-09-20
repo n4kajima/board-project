@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+  <div class="col-lg-8">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="mb-3">質問を投稿</h4>
+
+        <div class="alert alert-info">
+          <div class="fw-bold">タイトル例（検索しやすくするために協力お願いします）</div>
+          <ul class="mb-0">
+            <li>東京大学　2003年　数学第6問</li>
+            <li>青チャート　例題123</li>
+            <li>英文法　比較級</li>
+            <p class="small">画像添付するときにも問題の最初の10文字だけでも書いてくださると助かります</p>
+          </ul>
+        </div>
+
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="mb-2">
+            <label class="form-label">科目</label>
+            {{ form.subject }}
+          </div>
+          <div class="mb-2">
+            <label class="form-label">タイトル</label>
+            {{ form.title }}
+          </div>
+          <div class="mb-2">
+            <label class="form-label">本文（任意）</label>
+            {{ form.body }}
+          </div>
+          <div class="mb-3">
+            <label class="form-label">画像アップロード（複数可）</label>
+            {{ form.images }}
+            <div class="form-text">画像を複数枚添付できます。</div>
+          </div>
+          <button class="btn btn-primary">投稿</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

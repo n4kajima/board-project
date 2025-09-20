@@ -1,0 +1,44 @@
+{# core/templates/partials/answer_item.html #}
+<div class="card mb-3">
+  <div class="card-body">
+    <div class="small text-muted mb-2">
+      by {{ a.author.username }} ・ {{ a.created_at|date:"Y/m/d H:i" }}
+    </div>
+
+    <div style="white-space: pre-wrap">{{ a.body }}</div>
+
+    {% if a.attachments.all %}
+      <div class="mt-2 d-flex flex-wrap gap-2">
+        {% for att in a.attachments.all %}
+          {% if att.image %}
+            <img src="{{ att.image.url }}" class="img-thumbnail" style="max-height:160px" alt="attachment">
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <!-- 返信スレッド -->
+    <div class="mt-3 ps-3 border-start">
+      {% for r in a.replies.all %}
+        <div class="mb-2">
+          <div class="small text-muted">
+            {{ r.author.username }} ・ {{ r.created_at|date:"Y/m/d H:i" }}
+          </div>
+          <div style="white-space: pre-wrap">{{ r.body }}</div>
+        </div>
+      {% empty %}
+        <div class="text-muted small">まだ返信はありません。</div>
+      {% endfor %}
+
+      {% if user.is_authenticated %}
+        <form method="post" action="{% url 'reply_create' a.id %}" class="mt-2">
+          {% csrf_token %}
+          <div class="input-group">
+            <input class="form-control" name="body" placeholder="返信を書く">
+            <button class="btn btn-outline-primary">送信</button>
+          </div>
+        </form>
+      {% endif %}
+    </div>
+  </div>
+</div>

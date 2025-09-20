@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+  <!-- 左：検索/フィルタ -->
+  <div class="col-12 col-md-3 mb-3">
+    <div class="card">
+      <div class="card-body">
+        <form method="get">
+          <div class="mb-2">
+            <label class="form-label">キーワード</label>
+            <input type="text" name="q" value="{{request.GET.q}}" class="form-control" placeholder="問題を検索">
+          </div>
+          <div class="mb-2">
+            <label class="form-label">ステータス</label>
+            <select class="form-select" name="status">
+              <option value="" {% if not request.GET.status %}selected{% endif %}>両方</option>
+              <option value="open" {% if request.GET.status == "open" %}selected{% endif %}>質問中</option>
+              <option value="answered" {% if request.GET.status == "answered" %}selected{% endif %}>回答済み</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">科目</label>
+            <select class="form-select" name="subject">
+              <option value="">全科目</option>
+              {% for s in subjects %}
+                <option value="{{s.id}}" {% if request.GET.subject|default:'' == s.id|stringformat:'s' %}selected{% endif %}>{{s.name}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <button class="btn btn-primary w-100" type="submit">絞り込み</button>
+        </form>
+        {% if mine %}<div class="mt-2 text-muted small">※自分の質問のみ表示中</div>{% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- 右：問題一覧（大きく） -->
+  <div class="col-12 col-md-9">
+    {% for q in questions %}
+      {% include "partials/question_item.html" with q=q %}
+    {% empty %}
+      <div class="alert alert-info">該当する問題がありません。</div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
