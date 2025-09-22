@@ -128,7 +128,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID", "")
 GOOGLE_CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET", "")
 
-"""if GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET:
+if GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET:
     SOCIALACCOUNT_PROVIDERS = {
         "google": {
             "APP": {
@@ -137,7 +137,7 @@ GOOGLE_CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET", "")
                 "key": "",
             }
         }
-    }"""
+    }
 
 SITE_ID = 1
 AUTHENTICATION_BACKENDS = [
