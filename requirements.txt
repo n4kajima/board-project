@@ -1,6 +1,14 @@
 pip>=25.2
 setuptools>=70.0
 wheel
+Django==5.0.6
+gunicorn
+django-allauth
+pillow
+pytesseract
+python-dotenv
+dj-database-url
+psycopg2-binary
 aiobotocore<2.13.0
 aiobotocore @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_1cl06d5vjc/croot/aiobotocore_1714464399334/work
 aiohappyeyeballs @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_170hwh6b2i/croot/aiohappyeyeballs_1725434022310/work
