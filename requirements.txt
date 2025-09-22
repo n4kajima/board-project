@@ -1,3 +1,7 @@
+pip>=25.2
+setuptools>=70.0
+wheel
+aiobotocore<2.13.0
 aiobotocore @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_1cl06d5vjc/croot/aiobotocore_1714464399334/work
 aiohappyeyeballs @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_170hwh6b2i/croot/aiohappyeyeballs_1725434022310/work
 aiohttp @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_4dbk4qcpk1/croot/aiohttp_1725527761629/work
@@ -83,6 +87,7 @@ diff-match-patch @ file:///Users/ktietz/demo/mc3/conda-bld/diff-match-patch_1630
 dill @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_28zwy_olqk/croot/dill_1715094676263/work
 distributed @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_fflqhqrq0u/croot/distributed_1725523026486/work
 distro @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_ddkyz0575y/croot/distro_1714488254309/work
+dj-database-url==3.0.1
 Django==5.0.6
 django-allauth==0.63.6
 django-extensions==4.1
@@ -241,6 +246,7 @@ Protego @ file:///tmp/build/80754af9/protego_1598657180827/work
 proto-plus==1.26.1
 protobuf==4.25.3
 psutil @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/psutil_1699248249804/work
+psycopg2-binary==2.9.10
 ptyprocess @ file:///tmp/build/80754af9/ptyprocess_1609355006118/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl
 pure-eval @ file:///opt/conda/conda-bld/pure_eval_1646925070566/work
 py-cpuinfo @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/py-cpuinfo_1699242825254/work
@@ -489,7 +495,7 @@ selenium==4.34.2
 semver @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_99ujwp04tw/croot/semver_1709243633470/work
 Send2Trash @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/send2trash_1701803532643/work
 service-identity @ file:///Users/ktietz/demo/mc3/conda-bld/service_identity_1629460757137/work
-setuptools==75.1.0
+setuptools==80.9.0
 shapely==2.1.1
 sip @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/sip_1699238710791/work
 six @ file:///tmp/build/80754af9/six_1644875935023/work
@@ -556,7 +562,7 @@ webencodings @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/w
 websocket-client @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_d37u7gqts8/croot/websocket-client_1715878310260/work
 Werkzeug @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_5bnbxlhunm/croot/werkzeug_1716533322814/work
 whatthepatch @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/whatthepatch_1699243659982/work
-wheel==0.44.0
+wheel==0.45.1
 widgetsnbextension @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_45ynevdsp5/croot/widgetsnbextension_1710960054121/work
 wrapt @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/wrapt_1699240702378/work
 wsproto==1.2.0
@@ -570,3 +576,5 @@ zict @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/zict_1699
 zipp @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/zipp_1707348942775/work
 zope.interface @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/zope.interface_1699243689919/work
 zstandard @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_cairdg5u3o/croot/zstandard_1728569200438/work
+dj-database-url
+psycopg2-binary
