@@ -11,3 +11,4 @@ python-dotenv
 dj-database-url
 psycopg2-binary
 requests
+PyJWT==2.9.0
